@@ -17,6 +17,7 @@ CREATE TABLE userprofiles (
 
 CREATE TABLE presidents (
     id Int (11) AUTO_INCREMENT NOT NULL,
+    name VARCHAR (255) NOT NULL,
     PRIMARY KEY (id)    
 );
 
