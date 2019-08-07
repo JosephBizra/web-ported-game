@@ -1,13 +1,24 @@
 {
-  "name": "client",
+  "name": "mern",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://josephbizra.github.io/web-ported-game/.",
   "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "concurrently": "^4.1.1",
+    "express": "^4.17.1",
     "gh-pages": "^2.1.0",
+    "is-empty": "^1.2.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.8",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "react-script": "^2.0.5",
+    "react-scripts": "3.0.1",
+    "validator": "^11.1.0"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -15,7 +26,8 @@
     "deploy": "gh-pages -d build",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "server": "nodemon server.js"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -31,5 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
   }
 }
