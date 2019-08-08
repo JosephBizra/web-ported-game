@@ -22,10 +22,10 @@ class App extends Component {
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/nav" component={Nav} />
-            <Route exact path="/nav/racer" component={Racer} />
-            <Route exact path="/nav/cart" component={Cart} />
-            <Route exact path="/nav/track" component={Track} />
-            <Route exact path="/nav/level" component={Level} />
+            <Route exact path="/racer" component={Racer} />
+            <Route exact path="/cart" component={Cart} />
+            <Route exact path="/track" component={Track} />
+            <Route exact path="/level" component={Level} />
           </Switch>
         </div>
       </Router>
