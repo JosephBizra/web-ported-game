@@ -1,8 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const passport = require("passport");
-// const routes = require("./routes/index");
+// const passport = require("passport");
+const routes = require("./routes/index");
 const app = express();
 // Bodyparser middleware
 app.use(
@@ -23,16 +23,16 @@ app.use(bodyParser.json());
 //   .catch(err => console.log(err));
 
 // Passport middleware
-app.use(passport.initialize());
+// app.use(passport.initialize());
 
 // Passport config
-require("./config/passport")(passport);
+// require("./config/passport")(passport);
 
 // Routes
-// app.use(app.routes);
-// routes.initialize(app);
+app.use(app.routes);
+routes.initialize(app);
 
 
 // Starts server.
-const port = process.env.PORT || 3306;
+const port = process.env.PORT || 5000;
 app.listen(port, () => console.log(`Server up and running on port ${port} !`));
