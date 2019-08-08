@@ -7,7 +7,7 @@
 body {
    width: 960px; 
    margin: 0 auto;
-   background-image: url("background.jpg");
+   background-image: url("client/src/Racer/images/Screenshot(101).png");
    background-repeat: no-repeat;
    background-size: cover;
 }
