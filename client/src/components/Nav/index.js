@@ -9,16 +9,16 @@ function Nav() {
         <div className="container-1">
             <div className="nav">
                 <div className="racer">
-                    <Link to="/nav/racer">Racer</Link>
+                    <Link to="/racer">Racer</Link>
                 </div>
                 <div className="cart">
-                    <Link to="/nav/cart">Cart</Link>
+                    <Link to="/cart">Cart</Link>
                 </div>
                 <div className="track">
-                    <Link to="/nav/track">Track</Link>
+                    <Link to="/track">Track</Link>
                 </div>
                 <div className="level">
-                    <Link to="/nav/level">Difficulty</Link>
+                    <Link to="/level">Difficulty</Link>
                 </div>
             </div>
         </div>

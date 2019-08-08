@@ -4,7 +4,7 @@ import "./style.css";
 function Title() {
    return(
     <div className="header">
-        <h4>World Domination Racing!</h4>
+        <h1>World Domination Racing!</h1>
     </div>
    );
 }

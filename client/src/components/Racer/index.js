@@ -6,7 +6,7 @@ import Trump from "./images/trump.jpg";
 function Racer() {
     return(
         <div className="container-2">
-            <p style={{color:"white"}}>Select Racer</p>
+            <h2 style={{color:"white"}}>Select Racer</h2>
             <div className="images">
             <img src={Obama}/>
             <img src={Trump}/>

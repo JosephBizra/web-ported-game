@@ -4,7 +4,7 @@ import "./style.css";
 function Level() {
     return(
         <div className="container-2">
-            <p>Select Difficulty</p>
+            <h2>Select Difficulty</h2>
         </div>
     );
 }
