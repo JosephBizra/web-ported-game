@@ -6,8 +6,7 @@ router.route("/")
   .get(racerController.findAll)
 
 // Matches with "/api/racer/:id"
-router
-  .route("/:id")
+router.route("/:id")
   .get(racerController.findById)
 
 module.exports = router;
