@@ -1,10 +1,14 @@
 import React from "react";
 import "./style.css";
+import Nav from "../Nav";
 
 function Track() {
     return(
-        <div className="container-2">
-            <h2>Select Track</h2>
+        <div>
+            <Nav />
+            <div className="container-2">
+                <p className="select-title">Select Track</p>
+            </div>
         </div>
     );
 }

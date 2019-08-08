@@ -4,7 +4,7 @@ import "./style.css";
 function Title() {
    return(
     <div className="header">
-        <h1>World Domination Racing!</h1>
+        <h3 className="game-title">World Domination Racing!</h3>
     </div>
    );
 }

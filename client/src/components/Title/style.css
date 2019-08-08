@@ -5,7 +5,8 @@
     padding: 10px;
 }
 
-div h2 {
+.game-title {
+    font-size: 32px;
     color: whitesmoke;
-    background-color: crimson;
+    text-decoration: bolder;
 }
