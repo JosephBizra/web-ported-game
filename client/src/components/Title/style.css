@@ -1,0 +1,11 @@
+.header {
+    width: 100%; 
+    background: rgb(82, 163, 245, 0.95);
+    color: white;
+    padding: 10px;
+}
+
+div h2 {
+    color: whitesmoke;
+    background-color: crimson;
+}
