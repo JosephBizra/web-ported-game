@@ -1,10 +1,14 @@
 import React from "react";
 import "./style.css";
+import Nav from "../Nav";
 
 function Level() {
     return(
-        <div className="container-2">
-            <h2>Select Difficulty</h2>
+        <div>
+            <Nav />
+            <div className="container-2">
+                <p className="select-title">Select Level</p>
+            </div>
         </div>
     );
 }

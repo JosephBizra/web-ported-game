@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://josephbizra.github.io/web-ported-game/.",
+  "main": "server.js",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
@@ -14,16 +15,7 @@
     "mongoose": "^5.6.8",
     "passport": "^0.4.0",
     "passport-jwt": "^4.0.0",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-<<<<<<< HEAD
-    "react-script": "^2.0.5",
-    "react-scripts": "^3.0.1",
     "validator": "^11.1.0"
-=======
-    "react-router-dom": "^5.0.1",
-    "react-scripts": "3.0.1"
->>>>>>> fe8db205c5941b17e7d42a3cce43e614eb60d2dc
   },
   "scripts": {
     "start": "if-env NODE_ENV=production && npm run start:prod || npm run start:dev",

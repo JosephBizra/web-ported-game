@@ -5,6 +5,10 @@
     background-color: rgb(135, 206, 250, 0.8);
 }
 
-div h2 {
+
+.select-title {
+    font-size: 22px;
     color: whitesmoke;
+    background-color: crimson;
+    text-decoration: 800;
 }
