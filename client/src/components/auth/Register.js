@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
 class Register extends Component {
   constructor() {
     super();
@@ -10,7 +9,7 @@ class Register extends Component {
       password: "",
       password2: "",
       errors: {}
-    };
+     };
   }
 
   onChange = e => {
@@ -26,7 +25,6 @@ class Register extends Component {
       password: this.state.password,
       password2: this.state.password2
     };
-
     console.log(newUser);
   };
 
@@ -45,8 +43,10 @@ class Register extends Component {
               <h4>
                 <b>Register</b> below
               </h4>
-              <p className="grey-text text-darken-1">
-                Already have an account? <Link to="/login">Log in</Link>
+              <p className="text-darken-1">
+                Already have an account?
+               
+                <Link className="log"to="/login">Log in</Link>
               </p>
             </div>
             <form noValidate onSubmit={this.onSubmit}>
@@ -101,7 +101,7 @@ class Register extends Component {
                   type="submit"
                   className="btn btn-large waves-effect waves-light hoverable blue accent-3"
                 >
-                  Sign up
+                  <Link to="/nav">Register</Link>
                 </button>
               </div>
             </form>

@@ -2,11 +2,11 @@
     width: 100%; 
     background: rgb(82, 163, 245, 0.95);
     color: white;
-    padding: 10px;
+    padding: 20px;
 }
 
 .game-title {
     font-size: 32px;
-    color: whitesmoke;
+    color: black;
     text-decoration: bolder;
 }
