@@ -4,15 +4,15 @@ import Obama from "./images/obama.jpg";
 import Trump from "./images/trump.jpg";
 import Nav from "../Nav";
 
-function Racer() {
+function Racer(props) {
     return (
         <div>
             <Nav />
             <div className="container-2">
                 <p className="select-title">Select Racer</p>
-                <div className="images">
-                    <img src={Obama} />
-                    <img src={Trump} />
+                <div className="images" onClick={() => props.handleClick(props.id)}>
+                    <img src={Obama} id="obama"/>
+                    <img src={Trump} id="trump"/>
                 </div>
             </div>
         </div>
