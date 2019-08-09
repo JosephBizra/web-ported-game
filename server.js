@@ -31,7 +31,7 @@ app.use(bodyParser.json());
 
 
 // Routes
-app.use('/users', require('./apiauthentication/routes/users'));
+// app.use('/users', require('./apiauthentication/routes/users'));
 
 
 var syncOptions = { force: false };
