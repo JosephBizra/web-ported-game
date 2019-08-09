@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "https://josephbizra.github.io/web-ported-game/.",
+  "main": "server.js",
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
@@ -19,7 +20,6 @@
     "react-dom": "^16.8.6",
     "react-script": "^2.0.5",
     "react-scripts": "^3.0.1",
-    "sequelize": "^5.12.3",
     "validator": "^11.1.0"
   },
   "scripts": {
