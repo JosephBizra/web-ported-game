@@ -1,3 +1,8 @@
+module.exports = {
+    User: require("./users")
+};
+
+
 // "use strict";
 
 // var fs = require("fs");
@@ -34,3 +39,14 @@
 // db.Sequelize = Sequelize;
 
 // module.exports = db;
+
+
+
+
+
+
+
+
+
+
+
