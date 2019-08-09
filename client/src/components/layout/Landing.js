@@ -11,7 +11,7 @@ class Landing extends Component {
               <span style={{ fontFamily: "monospace" }}>or Register</span> To play Game 
             </h4>
             <p className="flow-text grey-text text-darken-1">
-             Our Racing game........
+             Our Racing game ........
             </p>
             <br />
             <div className="col s6">
