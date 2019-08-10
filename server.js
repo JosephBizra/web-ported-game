@@ -2,7 +2,7 @@
 //require("dotenv").config();
 const express = require("express");
 const morgan = require('morgan');
-// const mongoose = require('mongoose');
+const mongoose = require('mongoose');
 mongoose.set(useNewUrlParser, true);
 // var passport = require("passport");
 // var session = require("express-session");
@@ -42,7 +42,7 @@ if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
 //Connect to Mongoose:
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/esk");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/Web-Ported-Game");
 
 // Starting the server, syncing our models ------------------------------------/
 // db.sequelize.sync(syncOptions).then(function () {
@@ -60,4 +60,3 @@ if (process.env.NODE_ENV === "test") {
 
 module.exports = app;
 
-// 🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎🌎
