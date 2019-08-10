@@ -1,4 +1,4 @@
-"use strict";
+/* eslint-disable no-redeclare */
 
 var fs = require("fs");
 var path = require("path");
