@@ -42,7 +42,7 @@ if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
 //Connect to Mongoose:
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/WorldDominationRacing");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/PoliticalRace");
 
 // Starting the server, syncing our models ------------------------------------/
   app.listen(PORT, function (err) {
