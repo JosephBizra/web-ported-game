@@ -5,14 +5,14 @@ const db = require("../models");
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/reactreadinglist"
+  "mongodb://localhost/PoliticalRace"
 );
 
 // Data
 const userSeed = [
     {
-      name: "The Dead Zone",
-      password: "Stephen King",
+      name: "Andrew Griswold",
+      password: "Unicornsrkool",
       email: "1223@gmail.com",
       lap_time: 3.34,
       wins: 2,
