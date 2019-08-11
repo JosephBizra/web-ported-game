@@ -2,8 +2,8 @@
 //require("dotenv").config();
 const express = require("express");
 const morgan = require('morgan');
-// const mongoose = require('mongoose');
-mongoose.set(useNewUrlParser, true);
+const mongoose = require('mongoose');
+
 // var passport = require("passport");
 // var session = require("express-session");
 const bodyParser = require("body-parser");
@@ -31,7 +31,7 @@ app.use(bodyParser.json());
 
 
 // Routes
-app.use('/users', require('./apiauthentication/routes/users'));
+// app.use('/users', require('./apiauthentication/routes/users'));
 
 
 var syncOptions = { force: false };
@@ -42,10 +42,9 @@ if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
 //Connect to Mongoose:
-// mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/esk");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/PoliticalRace");
 
 // Starting the server, syncing our models ------------------------------------/
-// db.sequelize.sync(syncOptions).then(function () {
   app.listen(PORT, function (err) {
     if (!err) {
       console.log(
