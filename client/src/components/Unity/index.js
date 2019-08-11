@@ -9,10 +9,10 @@ function Unity(props) {
             <div className="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
             <div className="title">PresidentialRaces</div>
         </div>
-        <link rel="shortcut icon" href="../MyGame/TemplateData/favicon.ico"></link>
-        <link rel="stylesheet" href="../MyGame/TemplateData/style.css"></link>
-        <script src="../MyGame/TemplateData/UnityProgress.js"></script>
-        <script src="../MyGame/Build/UnityLoader.js"></script>
+        <link rel="shortcut icon" href="./TemplateData/favicon.ico"></link>
+        <link rel="stylesheet" href="./TemplateData/style.css"></link>
+        <script src="./public/TemplateData/UnityProgress.js"></script>
+        <script src="./Build/UnityLoader.js"></script>
 
         </div>
     </div>
