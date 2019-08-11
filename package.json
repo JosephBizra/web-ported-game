@@ -20,8 +20,10 @@
     "passport-jwt": "^4.0.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.1",
     "react-script": "^2.0.5",
     "react-scripts": "^3.0.1",
+    "react-unity-webgl": "^7.1.7",
     "validator": "^11.1.0"
   },
   "scripts": {
@@ -53,3 +55,4 @@
     "nodemon": "^1.19.1"
   }
 }
+
