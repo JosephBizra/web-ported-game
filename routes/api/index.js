@@ -1,13 +1,7 @@
 const router = require("express").Router();
-const racerController = require("../../controllers/racerController");
+const userRoutes = require("./users");
 
-// Matches with "/api/racer"
-router.route("/")
-  .get(racerController.findAll)
-
-// Matches with "/api/racer/:id"
-router
-  .route("/:id")
-  .get(racerController.findById)
+// Book routes
+router.use("/users", userRoutes);
 
 module.exports = router;

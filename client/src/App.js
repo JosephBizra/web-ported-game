@@ -9,11 +9,22 @@ import Racer from "./components/Racer";
 import Cart from "./components/Cart";
 import Track from "./components/Track";
 import Level from "./components/Level";
+import Unity, { UnityContent } from "react-unity-webgl";
 import "./App.css";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+ 
+    this.unityContent = new UnityContent(
+      "./PresRaceAlpha1-Warren/Build/PresRaceAlpha1-Warren.json",
+      "./PresRaceAlpha1-Warren/Build/UnityLoader.js"
+    );
+  }
+   
   render() {
     return (
+      <div>
       <Router>
         <div className="App">
           <Title />
@@ -26,9 +37,12 @@ class App extends Component {
             <Route exact path="/cart" component={Cart} />
             <Route exact path="/track" component={Track} />
             <Route exact path="/level" component={Level} />
+            <Route exact path="/game"> <Unity unityContent={this.unityContent} /> </Route>
           </Switch>
         </div>
       </Router>
+      
+    </div>  
     );
   }
 }
