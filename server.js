@@ -3,6 +3,7 @@
 const express = require("express");
 const morgan = require('morgan');
 const mongoose = require('mongoose');
+const routes = require("./routes");
 
 // var passport = require("passport");
 // var session = require("express-session");
@@ -21,6 +22,7 @@ app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+app.use(routes);
 // // For Passport
 // app.use(session({ secret: "keyboard cat",resave: true, saveUninitialized:true})); // session secret
  
