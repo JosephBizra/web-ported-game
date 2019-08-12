@@ -8,10 +8,10 @@ class Landing extends Component {
           <div className="col s12 center-align">
             <h4>
               <b>LogIn</b>{" "}
-              <span style={{ fontFamily: "monospace" }}>or Register</span> To play Game 
+              <span style={{ fontFamily: "monospace" }}>or Register</span> To play Game
             </h4>
             <p className="flow-text grey-text text-darken-1">
-             Our Racing game ........
+              Our Racing game ........
             </p>
             <br />
             <div className="col s6">

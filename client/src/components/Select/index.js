@@ -22,13 +22,13 @@ const dbRef = firebase.ref().child('data');
 // eslint-disable-next-line react/require-render-return
 class Select extends Component {
     state = {
-      racerId:"",
-      mapId:"",
-      levelId:""
+        racerId: "",
+        mapId: "",
+        levelId: ""
     };
-    
+
     selectedRacer() {
-        
+
     }
 
     handleItemClick = id => {
@@ -36,10 +36,10 @@ class Select extends Component {
         API.saveRacer({
             racerId: this.state.racerId,
         })
-        .then(res => this.selectedRacer())
-        .catch(err => console.log(err)); 
-    };    
-    
+            .then(res => this.selectedRacer())
+            .catch(err => console.log(err));
+    };
+
     render() {
     }
 

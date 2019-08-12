@@ -72,7 +72,7 @@ class Register extends Component {
               </div>
               <div className="input-field col s12">
                 <input
-                  onChange={this.onChange}
+                  onChange={this.onChange}  
                   value={this.state.password}
                   error={errors.password}
                   id="password"
