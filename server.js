@@ -3,8 +3,8 @@
 const express = require("express");
 const morgan = require('morgan');
 const mongoose = require('mongoose');
-// var passport = require("passport");
-// var session = require("express-session");
+const passport = require("passport");
+const session = require("express-session");
 const bodyParser = require("body-parser");
 
 const app = express();

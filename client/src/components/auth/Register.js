@@ -19,6 +19,9 @@ class Register extends Component {
   onSubmit = e => {
     e.preventDefault();
 
+    // check for minimum length of name, regex for email, passwords minimum length and matching
+    // if not... alert error    
+
     const newUser = {
       name: this.state.name,
       email: this.state.email,
