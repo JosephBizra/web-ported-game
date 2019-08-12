@@ -1,43 +1,43 @@
-import React, { Component } from "react";
-import Nav from "../Nav";
-import * as firebase from 'firebase';
+// import React, { Component } from "react";
+// import Nav from "../Nav";
+// import * as firebase from 'firebase';
 
-const config = {
-    apiKey: "AIzaSyBhryEPS8RO6egieeB2Clrcy19r5kqNB2k",
-    authDomain: "presidential-races.firebaseapp.com",
-    databaseURL: "https://presidential-races.firebaseio.com",
-    projectId: "presidential-races",
-    storageBucket: "",
-    messagingSenderId: "947877301947",
-    appId: "1:947877301947:web:367f839f22561d8e"
-};
+// const config = {
+//     apiKey: "AIzaSyBhryEPS8RO6egieeB2Clrcy19r5kqNB2k",
+//     authDomain: "presidential-races.firebaseapp.com",
+//     databaseURL: "https://presidential-races.firebaseio.com",
+//     projectId: "presidential-races",
+//     storageBucket: "",
+//     messagingSenderId: "947877301947",
+//     appId: "1:947877301947:web:367f839f22561d8e"
+// };
 
-firebase.initializeApp(config);
+// firebase.initializeApp(config);
 
-console.log(firebase);
+// console.log(firebase);
 
-const db = firebase.database();
-const dbRef = firebase.ref().child('data');
-class Select extends Component {
-    state = {
-      racerId:"",
-      mapId:"",
-      levelId:""
-    };
+// const db = firebase.database();
+// const dbRef = firebase.ref().child('data');
+// class Select extends Component {
+//     state = {
+//       racerId:"",
+//       mapId:"",
+//       levelId:""
+//     };
     
-    selectedRacer() {
+//     selectedRacer() {
         
-    }
+//     }
 
-    handleItemClick = id => {
-        API.saveRacer({
-            racerId: this.state.racerId,
-        })
-        .then(res => this.selectedRacer())
-        .catch(err => console.log(err)); 
-    };    
+//     handleItemClick = id => {
+//         API.saveRacer({
+//             racerId: this.state.racerId,
+//         })
+//         .then(res => this.selectedRacer())
+//         .catch(err => console.log(err)); 
+//     };    
     
-    render() {
-    }
+//     render() {
+//     }
 
-}    
+// }    

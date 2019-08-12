@@ -27,33 +27,81 @@ const userSeed = [
         losses: 2
       },
       {
-        name: "Andrew Griswold",
-        password: "Unicornsrkool",
-        email: "1223@gmail.com",
+        name: "Brad Pitt",
+        password: "ptutrle",
+        email: "bradpitt@gmail.com",
         lap_time: 3.34,
         wins: 2,
         losses: 5
       },
       {
-        name: "Andrew Griswold",
-        password: "Unicornsrkool",
-        email: "1223@gmail.com",
+        name: "Tom Clancy",
+        password: "stuff",
+        email: "tom@gmail.com",
         lap_time: 3.34,
         wins: 2,
         losses: 5
       },
       {
-        name: "Andrew Griswold",
-        password: "Unicornsrkool",
-        email: "1223@gmail.com",
+        name: "Peter the Penguin",
+        password: "clubpenguin",
+        email: "peter@gmail.com",
         lap_time: 3.34,
         wins: 2,
         losses: 5
       },
       {
-        name: "Andrew Griswold",
-        password: "Unicornsrkool",
-        email: "1223@gmail.com",
+        name: "Joseph",
+        password: "codestuff",
+        email: "joseph@gmail.com",
+        lap_time: 3.34,
+        wins: 2,
+        losses: 5
+      },
+      {
+        name: "Sharath",
+        password: "codingggg",
+        email: "sharath@gmail.com",
+        lap_time: 3.34,
+        wins: 2,
+        losses: 5
+      },
+      {
+        name: "Daniel",
+        password: "programmer",
+        email: "dan@gmail.com",
+        lap_time: 3.34,
+        wins: 2,
+        losses: 5
+      },
+      {
+        name: "Nikita",
+        password: "101010101101",
+        email: "nik@gmail.com",
+        lap_time: 3.34,
+        wins: 2,
+        losses: 5
+      },
+      {
+        name: "Mckayla",
+        password: "Puppies",
+        email: "mckay@gmail.com",
+        lap_time: 3.34,
+        wins: 2,
+        losses: 5
+      },
+      {
+        name: "Joe Bidden",
+        password: "Obama",
+        email: "Joebidden@gmail.com",
+        lap_time: 3.34,
+        wins: 2,
+        losses: 5
+      },
+      {
+        name: "Kool Aid Guy",
+        password: "Cherryflavor",
+        email: "KoolGuy@gmail.com",
         lap_time: 3.34,
         wins: 2,
         losses: 5
