@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import Nav from "../Nav";
+import Start from "../Start";
 
 function Level() {
     return(
@@ -16,9 +17,7 @@ function Level() {
                 <button className="button">5</button>
                 </div>
             </div>
-            <div className="start-section">
-                <button className="start">Start</button>
-            </div>
+            <Start />
         </div>
     );
 }
