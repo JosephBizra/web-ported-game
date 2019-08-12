@@ -17,8 +17,8 @@ class App extends Component {
     super(props);
  
     this.unityContent = new UnityContent(
-      "./PresRaceAlpha1-Warren/Build/PresRaceAlpha1-Warren.json",
-      "./PresRaceAlpha1-Warren/Build/UnityLoader.js"
+      "./PresRaceAlpha1-Warren/Game/PresRaceAlpha1-Warren.json",
+      "./PresRaceAlpha1-Warren/Game/UnityLoader.js"
     );
   }
    
