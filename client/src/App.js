@@ -9,10 +9,7 @@ import Racer from "./components/Racer";
 import Cart from "./components/Cart";
 import Track from "./components/Track";
 import Level from "./components/Level";
-import UnityFile from "./components/Unity";
 import Unity, { UnityContent } from "react-unity-webgl";
-//import J from "./MyGame/Build/PressraceAlpha1-Trump.json";
-//import UnityLoader from "./MyGame/Build/UnityLoader.js";
 import "./App.css";
 
 class App extends Component {
@@ -20,9 +17,8 @@ class App extends Component {
     super(props);
  
     this.unityContent = new UnityContent(
-      "MyGame/Build/PressraceAlpha1-Trump.json",
-      "MyGame/TemplateData/UnityProgress.js",
-      "MyGame/Build/UnityLoader.js" 
+      "./PresRaceAlpha1-Warren/Build/PresRaceAlpha1-Warren.json",
+      "./PresRaceAlpha1-Warren/Build/UnityLoader.js"
     );
   }
    
@@ -41,7 +37,7 @@ class App extends Component {
             <Route exact path="/cart" component={Cart} />
             <Route exact path="/track" component={Track} />
             <Route exact path="/level" component={Level} />
-            <Route exact path="/game"> <Unity unityContent={this.unityContent}></Unity>component={UnityFile}</Route>
+            <Route exact path="/game"> <Unity unityContent={this.unityContent} /> </Route>
           </Switch>
         </div>
       </Router>
