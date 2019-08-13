@@ -1,14 +1,14 @@
 import React from "react";
 import "./style.css";
 import Nav from "../Nav";
-import Start from "../Start";
+import Start from "../wstart";
 
 function Level() {
     return(
         <div>
             <Nav />
             <div className="container-2">
-                <p className="select-title">Select Level</p>
+                <p className="select-title">Select Difficulty</p>
                 <div className="levels">
                 <button className="button">1</button>
                 <button className="button">2</button>
