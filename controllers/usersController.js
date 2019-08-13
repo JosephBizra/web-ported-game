@@ -33,5 +33,18 @@ module.exports = {
       .then(dbModel => dbModel.remove())
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  login: function(req, res) {
+    res.json(req.user);
+  },
+  register: function(req, res) {
+    db.User
+      .create(req.body)
+      .then(function() {
+        res.redirect(307, "/api/users/login");
+      })
+      .catch(function(err) {
+        res.status(401).json(err);
+      });
   }
 };

@@ -12,6 +12,21 @@ import Level from "./components/Level";
 import Unity, { UnityContent } from "react-unity-webgl";
 import "./App.css";
 
+import "./App.css";
+  
+//   handleClick() {
+//   state={
+//     racer:""
+//   };
+
+//   this.setState({
+//     [name]: value
+//   });
+// }
+
+
+const characters = ["elizabeth", "trump"]
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -20,8 +35,25 @@ class App extends Component {
       "./PresRaceAlpha1-Warren/Game/PresRaceAlpha1-Warren.json",
       "./PresRaceAlpha1-Warren/Game/UnityLoader.js"
     );
+    this.unityContent2 = new UnityContent(
+      "./PresRaceAlpha1-Trump/Game/PresRaceAlpha1-Trump.json",
+      "./PresRaceAlpha1-Trump/Game/UnityLoader.js"
+    );
   }
-   
+   state = {
+     characters: ["elizabeth", "trump"],
+     index: 0
+    //  character: "obama"
+   }
+   changeCharacter = () =>{
+
+     this.setState({
+       index: (this.state.index + 1) % this.state.characters.length
+      })
+   }
+   getCharacter = () => {
+     return this.state.characters[this.state.index]
+   }
   render() {
     return (
       <div>
@@ -33,11 +65,17 @@ class App extends Component {
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/nav" component={Nav} />
-            <Route exact path="/racer" component={Racer} />
+            <Route exact path="/racer" component={()=>{
+              return (
+              <Racer changeCharacter={()=>this.changeCharacter()} character={this.getCharacter()}
+              />
+              )
+            }} />
             <Route exact path="/cart" component={Cart} />
             <Route exact path="/track" component={Track} />
             <Route exact path="/level" component={Level} />
             <Route exact path="/game"> <Unity unityContent={this.unityContent} /> </Route>
+            <Route exact path="/game2"> <Unity unityContent={this.unityContent2} /> </Route>
           </Switch>
         </div>
       </Router>
