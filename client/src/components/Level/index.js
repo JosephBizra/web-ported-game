@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 import Nav from "../Nav";
-import Start from "../Start";
+import Start from "../wstart";
 
 function Level() {
     return(

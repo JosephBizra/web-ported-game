@@ -9,9 +9,9 @@ function Nav() {
         <div className="container-1">
             <div className="nav">
                 <div className="racer">
-                    <Link to="/racer">Racer</Link>
+                    <Link to="/racer">Game Setup</Link>
                 </div>
-                <div className="cart">
+                {/* <div className="cart">
                     <Link to="/cart">Cart</Link>
                 </div>
                 <div className="track">
@@ -19,7 +19,7 @@ function Nav() {
                 </div>
                 <div className="level">
                     <Link to="/level">Difficulty</Link>
-                </div>
+                </div> */}
             </div>
         </div>
     );
