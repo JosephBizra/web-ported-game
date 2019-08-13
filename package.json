@@ -2,7 +2,7 @@
   "name": "mern",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://josephbizra.github.io/web-ported-game/.",
+  "homepage": "https://presracealpha1test.herokuapp.com/",
   "main": "server.js",
   "dependencies": {
     "bcryptjs": "^2.4.3",

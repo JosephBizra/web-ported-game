@@ -9,7 +9,18 @@ const withAuth = require('./middleware');
 
 const app = express();
 
+
 const secret = 'mysecretsshhh';
+
+// Middleware
+app.use(morgan('dev'));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+if(process.env.NODE_ENV === "production"){
+  app.use(express.static("client/build"))
+}
+app.use(express.static("public"));
+
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
