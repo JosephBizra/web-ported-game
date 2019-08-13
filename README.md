@@ -6,6 +6,8 @@ This project was bootstrapped with [Create React App](https://github.com/dwillia
 ## Our Deployed App :
 (https://alpha1game.herokuapp.com)
 
+## Technologies Used :
+
 
 
 
