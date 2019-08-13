@@ -11,7 +11,22 @@ import Track from "./components/Track";
 import Level from "./components/Level";
 import Unity, { UnityContent } from "react-unity-webgl";
 import "./App.css";
+
+import "./App.css";
+  
+//   handleClick() {
+//   state={
+//     racer:""
+//   };
+
+//   this.setState({
+//     [name]: value
+//   });
+// }
+
+
 const characters = ["elizabeth", "trump"]
+
 class App extends Component {
   constructor(props) {
     super(props);

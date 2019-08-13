@@ -1,14 +1,13 @@
-.header {
-    width: 1024px; 
-    background-image: url(background.jpg);
+.header { 
+    background: rgb(82, 163, 245);
     background-size: cover;
     background-position-y: 34%;
-    padding: 70px 0px 10px 0px;
+    padding: 40px;
 }
 
 .game-title {
-    font-size: 32px;
-    color: white;;
+    font-size: 26px;
+    color: white;
     text-decoration: bolder;
-    opacity: 0.5;
+    font-family: 'Press Start 2P', cursive;
 }
