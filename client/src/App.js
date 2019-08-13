@@ -9,22 +9,12 @@ import Racer from "./components/Racer";
 import Cart from "./components/Cart";
 import Track from "./components/Track";
 import Level from "./components/Level";
-import UnityFile from "./components/Unity";
 import Unity, { UnityContent } from "react-unity-webgl";
-//import J from "./MyGame/Build/PressraceAlpha1-Trump.json";
-//import UnityLoader from "./MyGame/Build/UnityLoader.js";
+
 import "./App.css";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
- 
-    this.unityContent = new UnityContent(
-      "../public/MyGame/Build/PressraceAlpha1-Trump.json",
-      "../public/MyGame/TemplateData/UnityProgress.js",
-      "../public/MyGame/Build/UnityLoader.js" 
-    );
-  }
+
   
 //   handleClick() {
 //   state={
