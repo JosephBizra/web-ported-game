@@ -1,16 +1,16 @@
-const express = require('express');
-const bodyParser = require('body-parser');
-const cookieParser = require('cookie-parser');
-const path = require('path');
-const jwt = require('jsonwebtoken');
+    
+/* eslint-disable no-undef */
+//require("dotenv").config();
+const express = require("express");
+const morgan = require('morgan');
 const mongoose = require('mongoose');
-const User = require('./models/User');
-const withAuth = require('./middleware');
+
+var passport = require("passport");
+var session = require("express-session");
+const bodyParser = require("body-parser");
 
 const app = express();
-
-
-const secret = 'mysecretsshhh';
+const PORT = process.env.PORT || 3001;
 
 // Middleware
 app.use(morgan('dev'));
@@ -21,89 +21,46 @@ if(process.env.NODE_ENV === "production"){
 }
 app.use(express.static("public"));
 
-
-app.use(bodyParser.urlencoded({ extended: false }));
+//For BodyParser
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
-app.use(cookieParser());
 
-const mongo_uri = 'mongodb://localhost/react-auth';
-mongoose.connect(mongo_uri, { useNewUrlParser: true }, function(err) {
-  if (err) {
-    throw err;
-  } else {
-    console.log(`Successfully connected to ${mongo_uri}`);
-  }
-});
-
-app.use(express.static(path.join(__dirname, 'public')));
+// // For Passport
+app.use(session({ secret: "keyboard cat",resave: true, saveUninitialized:true})); // session secret
+ 
+app.use(passport.initialize());
+ 
+app.use(passport.session()); // persistent login sessions
 
 
-app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
 
-app.get('/api/home', function(req, res) {
-  res.send('Welcome!');
-});
+// Routes
+// app.use('/users', require('./apiauthentication/routes/users'));
+const routes = require("./routes");
+app.use(routes);
 
-app.get('/api/secret', withAuth, function(req, res) {
-  res.send('The password is potato');
-});
 
-app.post('/api/register', function(req, res) {
-  const { email, password } = req.body;
-  const user = new User({ email, password });
-  user.save(function(err) {
-    if (err) {
-      console.log(err);
-      res.status(500).send("Error registering new user please try again.");
-    } else {
-      res.status(200).send("Welcome to the club!");
+var syncOptions = { force: false };
+
+// If running a test, set syncOptions.force to true
+// clearing the `testdb`
+if (process.env.NODE_ENV === "test") {
+  syncOptions.force = true;
+}
+//Connect to Mongoose:
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/PoliticalRace");
+
+// Starting the server, syncing our models ------------------------------------/
+  app.listen(PORT, function (err) {
+    if (!err) {
+      console.log(
+        "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+        PORT,
+        PORT
+      );
     }
+    else{console.log(err, "Something went wrong with the possport db update");}
   });
-});
+// });
 
-app.post('/api/authenticate', function(req, res) {
-  const { email, password } = req.body;
-  User.findOne({ email }, function(err, user) {
-    if (err) {
-      console.error(err);
-      res.status(500)
-        .json({
-        error: 'Internal error please try again'
-      });
-    } else if (!user) {
-      res.status(401)
-        .json({
-        error: 'Incorrect email or password'
-      });
-    } else {
-      user.isCorrectPassword(password, function(err, same) {
-        if (err) {
-          res.status(500)
-            .json({
-            error: 'Internal error please try again'
-          });
-        } else if (!same) {
-          res.status(401)
-            .json({
-            error: 'Incorrect email or password'
-          });
-        } else {
-          // Issue token
-          const payload = { email };
-          const token = jwt.sign(payload, secret, {
-            expiresIn: '1h'
-          });
-          res.cookie('token', token, { httpOnly: true }).sendStatus(200);
-        }
-      });
-    }
-  });
-});
-
-app.get('/checkToken', withAuth, function(req, res) {
-  res.sendStatus(200);
-});
-
-app.listen(process.env.PORT || 3000);
+module.exports = app;

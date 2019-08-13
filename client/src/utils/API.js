@@ -16,5 +16,11 @@ export default {
   // Saves a racer to the database
   saveMap: function(mapId) {
     return axios.post("/api/map", mapId);
+  },
+  login: function(userData) {
+    return axios.post("/api/users/login", userData)
+  },
+  register: function(userData) {
+    return axios.post("/api/users/register", userData)
   }
 };

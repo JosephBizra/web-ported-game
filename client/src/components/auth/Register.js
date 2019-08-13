@@ -1,5 +1,10 @@
+
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "./register.css";
+import API from "../../utils/API";
+import { Redirect } from "react-router-dom";
+
 class Register extends Component {
   constructor() {
     super();
@@ -8,7 +13,8 @@ class Register extends Component {
       email: "",
       password: "",
       password2: "",
-      errors: {}
+      errors: {},
+      redirectTo: null
      };
   }
 
@@ -18,38 +24,48 @@ class Register extends Component {
 
   onSubmit = e => {
     e.preventDefault();
+    const { name, email, password, password2 } = this.state;
 
-    // check for minimum length of name, regex for email, passwords minimum length and matching
-    // if not... alert error    
+    if (password !== password2) {
+      //tell the user the passswords need to match
+      return
+    }
 
     const newUser = {
       name: this.state.name,
       email: this.state.email,
-      password: this.state.password,
-      password2: this.state.password2
+      password: this.state.password
     };
     console.log(newUser);
+
+    API.register(newUser).then(user => {
+      console.log("we did it: ", user);
+      this.setState({ redirectTo: "/nav" })
+      //redirecf the user somewhere
+    })
   };
 
   render() {
     const { errors } = this.state;
 
+    if(this.state.redirectTo) {
+      return <Redirect to={this.state.redirectTo} />
+    }
+
     return (
-      <div className="container">
+      <div className="container-register">
         <div className="row">
-          <div className="col s8 offset-s2">
+          <div className="col m8">
             <Link to="/" className="btn-flat waves-effect">
               <i className="material-icons left">keyboard_backspace</i> Back to
               home
             </Link>
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-              <h4>
-                <b>Register</b> below
-              </h4>
+
               <p className="text-darken-1">
                 Already have an account?
                
-                <Link className="log"to="/login">Log in</Link>
+                <Link className="log"to="/login"> Log in</Link>
               </p>
             </div>
             <form noValidate onSubmit={this.onSubmit}>
@@ -75,7 +91,7 @@ class Register extends Component {
               </div>
               <div className="input-field col s12">
                 <input
-                  onChange={this.onChange}  
+                  onChange={this.onChange}
                   value={this.state.password}
                   error={errors.password}
                   id="password"
@@ -102,9 +118,10 @@ class Register extends Component {
                     marginTop: "1rem"
                   }}
                   type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                  className="btn btn-dark"
+                  onClick={event => this.onSubmit(event)}
                 >
-                  <Link to="/nav">Register</Link>
+                  Register
                 </button>
               </div>
             </form>
