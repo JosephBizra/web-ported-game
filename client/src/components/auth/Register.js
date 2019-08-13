@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "./register.css";
+import API from "../../utils/API";
+import { Redirect } from "react-router-dom";
 
 class Register extends Component {
   constructor() {
@@ -10,7 +12,8 @@ class Register extends Component {
       email: "",
       password: "",
       password2: "",
-      errors: {}
+      errors: {},
+      redirectTo: null
      };
   }
 
@@ -20,18 +23,33 @@ class Register extends Component {
 
   onSubmit = e => {
     e.preventDefault();
+    const { name, email, password, password2 } = this.state;
+
+    if (password !== password2) {
+      //tell the user the passswords need to match
+      return
+    }
 
     const newUser = {
       name: this.state.name,
       email: this.state.email,
-      password: this.state.password,
-      password2: this.state.password2
+      password: this.state.password
     };
     console.log(newUser);
+
+    API.register(newUser).then(user => {
+      console.log("we did it: ", user);
+      this.setState({ redirectTo: "/nav" })
+      //redirecf the user somewhere
+    })
   };
 
   render() {
     const { errors } = this.state;
+
+    if(this.state.redirectTo) {
+      return <Redirect to={this.state.redirectTo} />
+    }
 
     return (
       <div className="container-register">
@@ -100,8 +118,9 @@ class Register extends Component {
                   }}
                   type="submit"
                   className="btn btn-dark"
+                  onClick={event => this.onSubmit(event)}
                 >
-                  <Link to="/nav">Register</Link>
+                  Register
                 </button>
               </div>
             </form>

@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import API from "../../utils/API.js";
 import "./login.css";
+import { Redirect } from "react-router-dom";
 
 class Login extends Component {
   constructor() {
@@ -8,7 +10,8 @@ class Login extends Component {
     this.state = {
       email: "",
       password: "",
-      errors: {}
+      errors: {},
+      redirectTo: null
     };
   }
 
@@ -18,15 +21,25 @@ onChange = e => {
 
 onSubmit = e => {
     e.preventDefault();
-const userData = {
+    const userData = {
       email: this.state.email,
       password: this.state.password
     };
-console.log(userData);
+    console.log(userData);
+
+    API.login(userData).then(user => {
+      console.log("we did it: ", user);
+      this.setState({ redirectTo: "/nav" })
+    })
   };
 
 render() {
     const { errors } = this.state;
+    if(this.state.redirectTo) {
+      return <Redirect to={this.state.redirectTo} />
+    }
+
+
 return (
       <div className="container-login">
         <div className="row">
@@ -71,8 +84,9 @@ return (
                   }}
                   type="submit"
                   className="btn btn-dark"
+                  onClick={event => this.onSubmit(event)}
                 >
-                  <Link to="/nav">Login</Link>
+                  Login
                 </button>
               </div>
             </form>
