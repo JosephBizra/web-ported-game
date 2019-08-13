@@ -20,11 +20,21 @@ class App extends Component {
     super(props);
  
     this.unityContent = new UnityContent(
-      "MyGame/Build/PressraceAlpha1-Trump.json",
-      "MyGame/TemplateData/UnityProgress.js",
-      "MyGame/Build/UnityLoader.js" 
+      "../public/MyGame/Build/PressraceAlpha1-Trump.json",
+      "../public/MyGame/TemplateData/UnityProgress.js",
+      "../public/MyGame/Build/UnityLoader.js" 
     );
   }
+  
+//   handleClick() {
+//   state={
+//     racer:""
+//   };
+
+//   this.setState({
+//     [name]: value
+//   });
+// }
    
   render() {
     return (
@@ -41,7 +51,7 @@ class App extends Component {
             <Route exact path="/cart" component={Cart} />
             <Route exact path="/track" component={Track} />
             <Route exact path="/level" component={Level} />
-            <Route exact path="/game"> <Unity unityContent={this.unityContent}></Unity>component={UnityFile}</Route>
+            <Route exact path="/game"> <Unity unityContent={this.unityContent}></Unity> </Route>
           </Switch>
         </div>
       </Router>

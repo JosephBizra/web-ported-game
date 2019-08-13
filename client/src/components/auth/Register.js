@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "./register.css";
+
 class Register extends Component {
   constructor() {
     super();
@@ -32,21 +34,19 @@ class Register extends Component {
     const { errors } = this.state;
 
     return (
-      <div className="container">
+      <div className="container-register">
         <div className="row">
-          <div className="col s8 offset-s2">
+          <div className="col m8">
             <Link to="/" className="btn-flat waves-effect">
               <i className="material-icons left">keyboard_backspace</i> Back to
               home
             </Link>
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-              <h4>
-                <b>Register</b> below
-              </h4>
+
               <p className="text-darken-1">
                 Already have an account?
                
-                <Link className="log"to="/login">Log in</Link>
+                <Link className="log"to="/login"> Log in</Link>
               </p>
             </div>
             <form noValidate onSubmit={this.onSubmit}>
@@ -99,7 +99,7 @@ class Register extends Component {
                     marginTop: "1rem"
                   }}
                   type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                  className="btn btn-dark"
                 >
                   <Link to="/nav">Register</Link>
                 </button>

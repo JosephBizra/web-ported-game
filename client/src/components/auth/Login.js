@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import "./login.css";
+
 class Login extends Component {
   constructor() {
     super();
@@ -9,9 +11,11 @@ class Login extends Component {
       errors: {}
     };
   }
+
 onChange = e => {
     this.setState({ [e.target.id]: e.target.value });
   };
+
 onSubmit = e => {
     e.preventDefault();
 const userData = {
@@ -20,21 +24,19 @@ const userData = {
     };
 console.log(userData);
   };
+
 render() {
     const { errors } = this.state;
 return (
-      <div className="container">
-        <div style={{ marginTop: "4rem" }} className="row">
-          <div className="col s8 offset-s2">
+      <div className="container-login">
+        <div className="row">
+          <div className="col m8 ">
             <Link to="/" className="btn-flat waves-effect">
               <i className="material-icons left">keyboard_backspace</i> Back to
               home
             </Link>
             <div className="col s12" style={{ paddingLeft: "11.250px" }}>
-              <h4>
-                <b>Login</b> below
-              </h4>
-              <p className="grey-text text-darken-1">
+              <p>
                 Don't have an account? <Link to="/register">Register</Link>
               </p>
             </div>
@@ -47,7 +49,7 @@ return (
                   id="email"
                   type="email"
                 />
-                <label htmlFor="email">Email</label>
+                <label className="email" for="email">Email</label>
               </div>
               <div className="input-field col s12">
                 <input
@@ -68,7 +70,7 @@ return (
                     marginTop: "1rem"
                   }}
                   type="submit"
-                  className="btn btn-large waves-effect waves-light hoverable blue accent-3"
+                  className="btn btn-dark"
                 >
                   <Link to="/nav">Login</Link>
                 </button>
@@ -80,4 +82,5 @@ return (
     );
   }
 }
+
 export default Login;
