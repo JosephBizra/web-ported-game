@@ -1,8 +1,9 @@
+
 import React, { Component } from "react";
 import "./style.css";
 import Elizabeth from "./images/elizabeth.jpg";
 import Trump from "./images/trump.jpg";
-import Warren from "./images/elzabeth.jpg";
+import Warren from "./images/elizabeth.jpg";
 import Bluecar from "./images/bluecar.jpg";
 import Redcar from "./images/redcar.jpg";
 import Ovaloffice from "./images/ovaloffice.jpg";
@@ -49,9 +50,9 @@ class Racer extends Component {
                             <i className="fas fa-lock lock"></i>
                         </div>   
                     </div>
-function Racer(props) {
+     function Racer(props) {
     const whichCharacter = () => {
-        if(props.character==="elizabeth"){
+        if(props.character ==="elizabeth"){
             return (
             <div>
             <img src={Bluecar} id="elizabeth"/>
