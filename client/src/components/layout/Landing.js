@@ -60,7 +60,7 @@ class Landing extends Component {
           </div>
         </div>
       </div>
-      </div>
+      </div> </div>
     );
   }
 }
