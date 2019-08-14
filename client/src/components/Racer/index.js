@@ -55,7 +55,7 @@ function Racer(props) {
              <img src={Elizabeth} id="elizabeth"/>;
              <img src={Ovaloffice} id="elizabeth"/>
             <Wstart />
-            </div>) }
+            </div>); }
          else if( props.character==="trump") {
             return (
             <div>
@@ -63,7 +63,7 @@ function Racer(props) {
             <img src={Trump} id="trump"/>;
             <img src={Ovaloffice} id="trump"/>
            <Tstart />
-            </div> )
+            </div> );
         }
     }
     return (
