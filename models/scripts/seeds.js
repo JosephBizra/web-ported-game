@@ -10,14 +10,14 @@ mongoose.connect(
 
 // Data
 const userSeed = [
-    {
-      name: "The Dead Zone",
-      password: "Stephen King",
-      email: "1223@gmail.com",
-      lap_time: 3.34,
-      wins: 2,
-      losses: 5
-    },
+  {
+    name: "The Dead Zone",
+    password: "Stephen King",
+    email: "1223@gmail.com",
+    lap_time: 3.34,
+    wins: 2,
+    losses: 5
+  },
 ];
 
 db.User
