@@ -12,7 +12,7 @@ function Nav() {
                     <Link to="/racer">Game Setup</Link>
                 </div>
                 <div className="racer">
-                    <Link to="/Leaderboard">Leaderboards</Link>
+                    <Link to="/Leaderboard">Player Stats</Link>
                 </div>
                 {/* <div className="racer">
                     <Link to="/Scoresubmit">Score Submit</Link>

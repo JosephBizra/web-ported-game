@@ -26,7 +26,7 @@ class Leaderboard extends Component {
             <div>
                 <Nav />
                 <div className="container-2">
-                    <p className="select-title">Racing Leaderboards</p>
+                    <p className="select-title">Racing Stats</p>
                     <table className="leaderBoard">
                         <tr>
                             <th>Username</th>
