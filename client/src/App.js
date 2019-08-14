@@ -14,16 +14,6 @@ import "./App.css";
 
 import "./App.css";
   
-//   handleClick() {
-//   state={
-//     racer:""
-//   };
-
-//   this.setState({
-//     [name]: value
-//   });
-// }
-
 
 const characters = ["elizabeth", "trump"]
 
