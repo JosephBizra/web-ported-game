@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
-const db = require("../models");
+const db = require("..");
 
 // This Deletes database and reloads data
 
 mongoose.connect(
   process.env.MONGODB_URI ||
-  "mongodb://localhost/reactreadinglist"
+  "mongodb://localhost/PoliticalRace"
 );
 
 // Data
