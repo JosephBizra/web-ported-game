@@ -28,6 +28,7 @@ class App extends Component {
     this.unityContent2 = new UnityContent(
       "./TPresrace_alpha1_finalbuild1/Game/TPresrace_alpha1_finalbuild.json",
       "./TPresrace_alpha1_finalbuild1/Game/UnityLoader.js"
+
     );
   }
    state = {
