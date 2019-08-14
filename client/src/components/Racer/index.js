@@ -71,22 +71,24 @@ import Tstart from "../tstart";
      function Racer(props) {
 function Racer(props) {
     const whichCharacter = () => {
-        if(props.character ==="elizabeth"){
-            return (
+
+        if(props.character==="elizabeth") {
+            return ( 
+
             <div>
-            <img src={Bluecar} id="elizabeth"/>
-             <img src={Elizabeth} id="elizabeth"/>
+            <img src={Bluecar} id="elizabeth"/>;
+             <img src={Elizabeth} id="elizabeth"/>;
              <img src={Ovaloffice} id="elizabeth"/>
             <Wstart />
-            </div>)
-        } else if( props.character==="trump")        {
+            </div>); }
+         else if( props.character==="trump") {
             return (
             <div>
-            <img src={Redcar} id="trump"/>
-            <img src={Trump} id="trump"/>
+            <img src={Redcar} id="trump"/>;
+            <img src={Trump} id="trump"/>;
             <img src={Ovaloffice} id="trump"/>
            <Tstart />
-            </div> )
+            </div> );
         }
     }
     return (
