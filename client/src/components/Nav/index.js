@@ -14,6 +14,9 @@ function Nav() {
                 <div className="racer">
                     <Link to="/Leaderboard">Leaderboards</Link>
                 </div>
+                {/* <div className="racer">
+                    <Link to="/Scoresubmit">Score Submit</Link>
+                </div> */}
                 {/* <div className="cart">
                     <Link to="/cart">Cart</Link>
                 </div>
