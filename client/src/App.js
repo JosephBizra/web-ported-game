@@ -11,7 +11,12 @@ import Track from "./components/Track";
 import Level from "./components/Level";
 import Unity, { UnityContent } from "react-unity-webgl";
 import "./App.css";
+
+import "./App.css";
+  
+
 const characters = ["elizabeth", "trump"]
+
 class App extends Component {
   constructor(props) {
     super(props);
