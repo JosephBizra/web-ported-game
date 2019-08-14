@@ -79,7 +79,7 @@ function Racer(props) {
              <img src={Ovaloffice} id="elizabeth"/>
             <Wstart />
             </div>)
-        }else if( props.character==="trump")        {
+        } else if( props.character==="trump")        {
             return (
             <div>
             <img src={Redcar} id="trump"/>
