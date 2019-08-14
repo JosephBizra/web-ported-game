@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { Component } from "react";
 import Nav from "../Nav";
 import * as firebase from 'firebase';
@@ -18,25 +19,27 @@ console.log(firebase);
 
 const db = firebase.database();
 const dbRef = firebase.ref().child('data');
+// eslint-disable-next-line react/require-render-return
 class Select extends Component {
     state = {
-      racerId:"",
-      mapId:"",
-      levelId:""
+        racerId: "",
+        mapId: "",
+        levelId: ""
     };
-    
+
     selectedRacer() {
-        
+
     }
 
     handleItemClick = id => {
+        // eslint-disable-next-line no-undef
         API.saveRacer({
             racerId: this.state.racerId,
         })
-        .then(res => this.selectedRacer())
-        .catch(err => console.log(err)); 
-    };    
-    
+            .then(res => this.selectedRacer())
+            .catch(err => console.log(err));
+    };
+
     render() {
     }
 

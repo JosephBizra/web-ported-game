@@ -1,8 +1,11 @@
+
 import React, { Component } from "react";
 //import "./style.css";
 import "./newstyle.css";
 import Elizabeth from "./images/elizabeth.jpg";
 import Trump from "./images/trump.jpg";
+
+import Warren from "./images/elizabeth.jpg";
 import Bluecar from "./images/bluecar.jpg";
 import Redcar from "./images/redcar.jpg";
 import Ovaloffice from "./images/ovaloffice.jpg";
@@ -46,10 +49,32 @@ import Tstart from "../tstart";
 //                         </div>   
 //                     </div>
 
+    render() {
+        return (
+            <div>
+                <Nav />
+                <div className="container-2">
+                    <p className="select-title">Select Racer</p>
+                    <div className="images">
+                        <div className="trump">
+                            <img className={`image-trump${this.state.clickedImages.trump ? " highlight":""}`} src={Trump} id="trump" onClick={() => this.handleClick("trump")}
+                            />
+                        </div>
+                        <div className="warren">
+                            <img className={`image-warren${this.state.clickedImages.warren ? " highlight":""}`} src={Warren} id="warren" onClick={() => this.handleClick("warren")}/>
+                        </div>
+                        <div className="obama">
+                            <img src={Obama} id="obama"/>
+                            <i className="fas fa-lock lock"></i>
+                        </div>   
+                    </div>
+     function Racer(props) {
 function Racer(props) {
     const whichCharacter = () => {
+
         if(props.character==="elizabeth") {
             return ( 
+
             <div>
             <img src={Bluecar} id="elizabeth"/>
              <img src={Elizabeth} id="elizabeth"/>
