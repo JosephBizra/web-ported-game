@@ -5,9 +5,6 @@ import Trump from "./images/trump.jpg";
 import Bluecar from "./images/bluecar.jpg";
 import Redcar from "./images/redcar.jpg";
 import Ovaloffice from "./images/ovaloffice.jpg";
-
-
-
 import Nav from "../Nav";
 import Wstart from "../wstart";
 import Tstart from "../tstart";
