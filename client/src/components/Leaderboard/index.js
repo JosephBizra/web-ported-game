@@ -5,7 +5,7 @@ import API from "../../utils/API";
 
 class Leaderboard extends Component {
     state = {
-        data: []
+        user: []
     };
 
 
@@ -15,7 +15,7 @@ class Leaderboard extends Component {
 
     loadUsers = () => {
         API.getUsers()
-        .then(res => this.setState({ name: res.data.name, lap_time: res.data.best_lap, wins: res.data.wins, losses: res.data.lossess }))
+        .then(res => this.setState({ user: res.data}))
         .catch(err => console.log(err));
     };
 
@@ -27,13 +27,6 @@ class Leaderboard extends Component {
                 <Nav />
                 <div className="container-2">
                     <p className="select-title">Racing Leaderboards</p>
-                    <div>
-                        {this.state.data.map(user => (
-                            <strong>
-                            {user.name} maybe {user.wins}
-                            </strong>
-                        ))}
-                    </div>
                     <table className="leaderBoard">
                         <tr>
                             <th>Username</th>
@@ -41,6 +34,14 @@ class Leaderboard extends Component {
                             <th>Losses</th>
                             <th>Best Lap Time</th>
                         </tr>
+                        {this.state.user.map(user => (
+                            <tr>
+                                <td>{user.name}</td>
+                                <td>{user.wins}</td>
+                                <td>{user.losses}</td>
+                                <td>{user.best_lap}</td>
+                            </tr>
+                        ))}
                     </table>
                 </div>
             </div>
