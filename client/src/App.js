@@ -22,12 +22,12 @@ class App extends Component {
     super(props);
  
     this.unityContent = new UnityContent(
-      "./WPresrace_alpha1_finalbuild/Game/WPresrace_alpha1_finalbuild.json",
-      "./WPresrace_alpha1_finalbuild/Game/UnityLoader.js"
+      "./WPresrace_alpha1_finalbuild1/Game/WPresrace_alpha1_finalbuild.json",
+      "./WPresrace_alpha1_finalbuild1/Game/UnityLoader.js"
     );
     this.unityContent2 = new UnityContent(
-      "./TPresrace_alpha1_finalbuild/Game/TPresrace_alpha1_finalbuild.json",
-      "./TPresrace_alpha1_finalbuild/Game/UnityLoader.js"
+      "./TPresrace_alpha1_finalbuild1/Game/TPresrace_alpha1_finalbuild.json",
+      "./TPresrace_alpha1_finalbuild1/Game/UnityLoader.js"
     );
   }
    state = {
