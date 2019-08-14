@@ -8,6 +8,7 @@ import Login from "./components/auth/Login";
 import Racer from "./components/Racer";
 import Cart from "./components/Cart";
 import Track from "./components/Track";
+import Leaderboard from "./components/Leaderboard";
 import Level from "./components/Level";
 import Unity, { UnityContent } from "react-unity-webgl";
 import "./App.css";
@@ -55,6 +56,7 @@ class App extends Component {
             <Route exact path="/register" component={Register} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/nav" component={Nav} />
+            <Route exact path="/leaderboard" component={Leaderboard} />
             <Route exact path="/racer" component={()=>{
               return (
               <Racer changeCharacter={()=>this.changeCharacter()} character={this.getCharacter()}

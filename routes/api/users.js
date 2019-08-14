@@ -4,7 +4,7 @@ const passport = require("../../config/passport.js");
 
 router.route("/")
   .get(usersController.findAll)
-  .post(usersController.create);
+  // .post(usersController.create);
 
 router.route("/login")
   .post(function(req, res, next) {

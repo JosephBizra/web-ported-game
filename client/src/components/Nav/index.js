@@ -11,6 +11,9 @@ function Nav() {
                 <div className="racer">
                     <Link to="/racer">Game Setup</Link>
                 </div>
+                <div className="racer">
+                    <Link to="/Leaderboard">Leaderboards</Link>
+                </div>
                 {/* <div className="cart">
                     <Link to="/cart">Cart</Link>
                 </div>
