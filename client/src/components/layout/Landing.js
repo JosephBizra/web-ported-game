@@ -27,15 +27,6 @@ class Landing extends Component {
       
       <div className="container-landing">
         <div className="row">
-
-          <div className="col s12 center-align">
-            <h4>
-              <b>LogIn</b>{" "}
-              <span style={{ fontFamily: "monospace" }}>or Register</span> To play Game
-            </h4>
-            <p className="flow-text grey-text text-darken-1">
-              Our Racing game ........
-            </p>
           <div className="login-head center-align">
             <h6 className="login-title">
               Log In or Register to Play
@@ -60,7 +51,7 @@ class Landing extends Component {
           </div>
         </div>
       </div>
-      </div> </div>
+      </div>
     );
   }
 }
